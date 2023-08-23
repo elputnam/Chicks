@@ -25,7 +25,7 @@ function preload(){
 function setup() {
   createCanvas(base.width, base.height);
   colorMode(HSB, 360, 100, 100, 100);
-  // frameRate(20);
+  frameRate(5);
 }
 
 function draw() {
