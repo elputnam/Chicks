@@ -72,8 +72,29 @@ function draw() {
   
   //universe
   noStroke();
-  fill(random(50), random(alp2-10, alp2));
+  fill(random(360), 100, 100, alp2);
   rect(0, 0, width, height);
+
+  //Schweps2
+  push();
+  tint(255, random(alp2-50, alp2));
+  image(Schweps1, 0, 0);
+  pop();
+
+  push();
+  tint(255, random(alp2-50, alp2));
+  image(Schweps2, 0, height*.25);
+  pop();
+
+  push();
+  tint(255, random(alp2-50, alp2));
+  image(Schweps1, 0, height/2);
+  pop();
+
+  push();
+  tint(255, random(alp2-50, alp2));
+  image(Schweps2, 0, height*.75);
+  pop();
  
    //sils
    push();
