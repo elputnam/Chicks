@@ -127,7 +127,7 @@ function draw() {
   //  }
    
   capturer.capture(document.getElementById('defaultCanvas0'));  
-  if (frameCount==2100){
+  if (frameCount==1500){
     save_record();
   }
   print(frameCount);
