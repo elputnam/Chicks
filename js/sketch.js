@@ -11,6 +11,14 @@ let j = 1;
 let alp1 = 100;
 let alp2 = 0
 
+//CCapture
+// var capture = false; // default is to not capture frames, can be changed with button in browser
+var capturer = new CCapture({
+  format:'webm', 
+  workersPath: 'js/',
+  framerate: 5
+});
+
 function preload(){
   for (let i = 1; i < 6; i++){
     sil[i] = loadImage("assets/Chicks_sil" + i + ".png")
@@ -29,6 +37,7 @@ function setup() {
 }
 
 function draw() {
+  if (frameCount==1) capturer.start();
   background(random(360), random(100), random(100));
 
   
@@ -117,5 +126,13 @@ function draw() {
   //   pop();
   //  }
    
-  
+  capturer.capture(document.getElementById('defaultCanvas0'));  
+  if (frameCount==2100){
+    save_record();
+  }
+  print(frameCount);
+}
+
+function save_record() {
+  capturer.save();
 }
