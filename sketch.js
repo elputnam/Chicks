@@ -48,9 +48,7 @@ function draw() {
   image(base, 0, 0);
   pop();
 
-
   //lights
- 
   blend(lights, 0, 0, lights.width, lights.height, random(-100), 0, width, height, LIGHTEST);
 
   push();
